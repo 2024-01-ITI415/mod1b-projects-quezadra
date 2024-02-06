@@ -359,15 +359,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439011315099616415, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: speed
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1439011315099616415, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: applePrefab
       value: 
       objectReference: {fileID: 1635265435284238313, guid: f3a8a792329ee7a49ab137217e9cfb45, type: 3}
+    - target: {fileID: 1439011315099616415, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: secondsBetweenAppleDrops
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5385214758800969618, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873309844400584435, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
