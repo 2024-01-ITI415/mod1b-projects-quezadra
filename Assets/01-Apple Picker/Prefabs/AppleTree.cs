@@ -32,7 +32,12 @@ public class AppleTree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // basic movement and changing direction
+        // basic movement
+        Vector3 pos = transform.position;
+        pos.x += speed * Time.deltaTime;
+        transform.position = pos;
+
+        // changing direction
 
     }
 }
