@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &525256051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2217689386232054145, guid: f3a8a792329ee7a49ab137217e9cfb45, type: 3}
+  m_PrefabInstance: {fileID: 2124576597700889910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &792234105
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,28 +220,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1331886145 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3856600358128974705, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
-  m_PrefabInstance: {fileID: 6867045715419171926}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1331886150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331886145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf275016630a7204f88f29f9ab430755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  applePrefab: {fileID: 3856600358128974705, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
-  speed: 1
-  leftandRightEdge: 10
-  changeToChangeDirection: 0
-  SecondsBetweenAppleDrop: 0
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basket
       objectReference: {fileID: 0}
+    - target: {fileID: 3194922189132455240, guid: 3b80caaa019fb804da7ae618f227db34, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8372452264886836712, guid: 3b80caaa019fb804da7ae618f227db34, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -493,21 +480,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1265360250103539522, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3856600358128974705, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
+    - target: {fileID: 3856600358128974705, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206319768564367306, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802027804657011272, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802027804657011272, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 525256051}
     - target: {fileID: 8802027804657011272, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: leftandRightEdge
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8802027804657011272, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: changeToChangeDirection
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 9027529426775366608, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3856600358128974705, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1331886150}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
