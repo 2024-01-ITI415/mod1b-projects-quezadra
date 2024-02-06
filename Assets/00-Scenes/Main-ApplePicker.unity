@@ -711,15 +711,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1439011315099616415, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: speed
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1439011315099616415, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: applePrefab
       value: 
       objectReference: {fileID: 1635265435284238313, guid: f3a8a792329ee7a49ab137217e9cfb45, type: 3}
     - target: {fileID: 1439011315099616415, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
+      propertyPath: chanceToChangeDirections
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439011315099616415, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: secondsBetweenAppleDrops
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5385214758800969618, guid: 61ec15c07fcae8545a125e74e4bb3e49, type: 3}
       propertyPath: m_Name
