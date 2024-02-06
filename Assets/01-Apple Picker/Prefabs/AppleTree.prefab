@@ -76,8 +76,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applePrefab: {fileID: 3856600358128974705}
   speed: 1
-  leftandRightEdge: 10
-  changeToChangeDirection: 0
+  leftandRightEdge: 20
+  changeToChangeDirection: 0.1
   SecondsBetweenAppleDrop: 0
 --- !u!1 &8206319768564367306
 GameObject:

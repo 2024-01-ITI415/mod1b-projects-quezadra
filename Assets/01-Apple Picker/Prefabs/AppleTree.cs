@@ -23,7 +23,7 @@ public class AppleTree : MonoBehaviour
     public float SecondsBetweenAppleDrop;
 
 
-  
+
     void Start()
     {
         // dropping every second 
@@ -39,5 +39,24 @@ public class AppleTree : MonoBehaviour
 
         // changing direction
 
+        if (pos.x < -leftandRightEdge)
+        {
+            speed = Mathf.Abs(speed); // Move ri
+        }
+        else if (pos.x > leftandRightEdge)
+        {
+            speed = -Mathf.Abs(speed);
+        }
+
+
+    }
+    void FixedUpdate()
+    {
+        if (Random.value < changeToChangeDirection)
+        {
+            speed *= -1;
+        }
     }
 }
+
+
