@@ -10,45 +10,53 @@ public class AppleTree : MonoBehaviour
     public float speed = 1f;
     // Distance where AppleTree turns around
     public float leftAndRightEdge = 10f;
-    // Chance that the AppleTree will change directions
-    public float chanceToChangeDirections = 0.1f;
-    // Rate at which Apples will be instantiated
-    public float secondsBetweenAppleDrops = 1f;
+    // Chance that the AppleTree will change direction
+    public float chanceToChangeDirection;
+    // Rate at which Apples will be instantiate
+    public float secondsBetweenAppleDrops = 2f;
+
     void Start()
     {
-        // Dropping apples every second
-        Invoke("DropApple", 2f);
+        // Dropping apples every two seconds
+        InvokeRepeating("DropApple", 2f, secondsBetweenAppleDrops);
     }
+
     void DropApple()
-    { // b
-        GameObject apple = Instantiate<GameObject>(applePrefab); // c
-        apple.transform.position = transform.position; // d
-        Invoke("DropApple", secondsBetweenAppleDrops); // e
+    {
+        GameObject apple = Instantiate<GameObject>(applePrefab);
+        apple.transform.position = transform.position;
     }
 
     void Update()
     {
         // Basic Movement
-        Vector3 pos = transform.position; // b
-        pos.x += speed * Time.deltaTime; // c
+        Vector3 pos = transform.position;
+        pos.x += speed * Time.deltaTime;
         transform.position = pos;
-        // Changing Direction
+
+        // Changing Direction Randomly
         if (pos.x < -leftAndRightEdge)
-        { // a
-            speed = Mathf.Abs(speed); // Move right // b
+        {
+            // move right
+            speed = Mathf.Abs(speed);
         }
         else if (pos.x > leftAndRightEdge)
-        { // c
-            speed = -Mathf.Abs(speed); // Move left // c
+        {
+            // move left
+            speed = -Mathf.Abs(speed);
         }
 
+        // Randomly change direction
+        if (Random.value < chanceToChangeDirection)
+        {
+            speed *= -1; // Change direction
+        }
     }
     void FixedUpdate()
     {
-        // Changing Direction Randomly is now time-based because of
-        FixedUpdate();
-            if (Random.value < chanceToChangeDirections)
-        { // b
+        // Changing Direction Randomly is now t
+        if (Random.value < chanceToChangeDirection)
+        {
             speed *= -1; // Change direction
         }
     }

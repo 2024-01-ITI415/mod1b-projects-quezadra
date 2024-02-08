@@ -19,7 +19,6 @@ public class Basket : MonoBehaviour
 
     void Update()
     {
-        
         Vector3 mousePos2D = Input.mousePosition;  
         mousePos2D.z = -Camera.main.transform.position.z;   //	b
                                                             //	Convert	the	point	from	2D	screen	space	into	3D	game	world	space
@@ -31,11 +30,10 @@ public class Basket : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision coll)
-    {   //	a
-        //	Find	out	what	hit	this	basket
-        GameObject collidedWith = coll.gameObject;  //	b
+    {   
+        GameObject collidedWith = coll.gameObject; 
         if (collidedWith.tag == "Apple")
-        {   //	c
+        {  
             Destroy(collidedWith);
 
             //	Parse	the	text	of	the	scoreGT	into	an	int
