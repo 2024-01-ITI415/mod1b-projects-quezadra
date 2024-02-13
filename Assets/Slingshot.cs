@@ -5,6 +5,7 @@ using UnityEngine;
 public class Slingshot : MonoBehaviour
 {
     [Header("Set in Inspector")]
+    static private Slingshot S;
     public GameObject prefabProjectile;
     public float velocityMult = 8f;
     [Header("Set Dynamically")]
@@ -12,11 +13,21 @@ public class Slingshot : MonoBehaviour
     public Vector3 launchPos;
     public GameObject projectile;
     public bool aimingMode;
-    private Rigidbody projectileRigidbody; 
+    private Rigidbody projectileRigidbody;
+
+    static public Vector3 LAUNCH_POS
+    {
+        get
+        {
+            if (S == null) return Vector3.zero;
+            return S.launchPos;
+        }
+    }
+
 
     private void Awake()
     {
-
+        S = this;
         Transform launchPointTrans = transform.Find("LaunchPoint"); //a
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false); //b
