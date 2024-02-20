@@ -7,6 +7,7 @@ TagManager:
   - Apple
   - Projectile
   - PickUp
+  - _Player
   layers:
   - Default
   - TransparentFX
