@@ -27,4 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+    void OnTriggerEnter(Collider other)
+    {
+        other.gameObject.SetActive(false);
+    }
 }
