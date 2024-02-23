@@ -9,6 +9,7 @@ TagManager:
   - PickUp
   - _Player
   - Goal
+  - Enemy
   layers:
   - Default
   - TransparentFX

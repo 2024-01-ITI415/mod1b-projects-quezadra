@@ -31,11 +31,19 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        if (other.gameObject.CompareTag("Goal")) 
-            {
-                // put win text here
-            }
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            // put win text here
+        }
+
+       
+        GameObject collidedWith = other.gameObject;
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(this.gameObject);
+        }
 
         other.gameObject.SetActive(false);
+
     }
 }
