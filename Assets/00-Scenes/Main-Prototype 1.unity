@@ -2465,6 +2465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 1275961037902743300, guid: 436cf27708c9bb14e91a9754df687e45, type: 3}
+      propertyPath: m_TagString
+      value: Goal
+      objectReference: {fileID: 0}
     - target: {fileID: 6083979700835207844, guid: 436cf27708c9bb14e91a9754df687e45, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.77

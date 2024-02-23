@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public enum GameMode
+public enum pGameMode
 { // b
     idle,
     playing,
@@ -22,7 +23,7 @@ public class Prototype : MonoBehaviour
     public int levelMax; // The number of levels
     public int shotsTaken;
     public GameObject maze; // The current castle
-    public GameMode mode = GameMode.idle;
+    public pGameMode mode = pGameMode.idle;
 
     void Start()
     {
@@ -49,12 +50,12 @@ public class Prototype : MonoBehaviour
         maze.transform.position = castlePos;
         shotsTaken = 0;
         // Reset the camera
-        SwitchView("wShow Both");
+//SwitchView("wShow Both");
         ProjectileLine.S.Clear();
         // Reset the goal
         Goal.goalMet = false;
         UpdateGUI();
-        mode = GameMode.playing;
+        mode = pGameMode.playing;
     }
     void UpdateGUI()
     {
@@ -64,16 +65,16 @@ public class Prototype : MonoBehaviour
     }
     void Update()
     {
-        UpdateGUI();
+        //UpdateGUI();
         // Check for level end
-        if ((mode == GameMode.playing) && Goal_.goalMet)
+        //if ((mode == pGameMode.playing) && Goal_.goalMet)
         {
             // Change mode to stop checking for level end
-            mode = GameMode.levelEnd;
+            //mode = pGameMode.levelEnd;
             // Zoom out
-            SwitchView("Show Both");
+            //SwitchView("Show Both");
             // Start the next level in 2 seconds
-            Invoke("NextLevel", 2f);
+            //Invoke("NextLevel", 2f);
         }
     }
     void NextLevel()

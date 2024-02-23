@@ -29,6 +29,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+
+
+        if (other.gameObject.CompareTag("Goal")) 
+            {
+                // put win text here
+            }
+
         other.gameObject.SetActive(false);
     }
 }
