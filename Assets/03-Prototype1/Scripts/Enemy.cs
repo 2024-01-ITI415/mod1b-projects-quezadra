@@ -8,15 +8,13 @@ public class Enemy : MonoBehaviour
     
     public float speed = 1f;
     // Distance where AppleTree turns around
-    public float leftAndRightEdge = 10f;
+    public float leftAndRightEdge = 10f; /// change to upAndDown and change 10f to the restrictions of the maze
+
+    /// </summary>
     // Chance that the AppleTree will change direction
     public float chanceToChangeDirection;
     public float y_movement;
-   
-    void Start()
-    {
-        
-    }
+  
 
     // Update is called once per frame
     void Update()
@@ -45,19 +43,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-   /// void OnTriggerEnter(Collider other)
-    /// <summary>
-   /// void OnTriggerEnter(Collider other)
-   /// </summary> other.gameObject;
-    ///    if (other.gameObject.CompareTag("_Player"))
-     ///   {
-        ///    Destroy();
-       /// }
-    
-    void FixedUpdate()
-    {
-        
-    }
 
+   
 
 }
