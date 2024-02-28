@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Apple
+  - Projectile
+  - PickUp
+  - _Player
+  - Goal
+  - Enemy
+  - Collectible
   layers:
   - Default
   - TransparentFX
@@ -11,9 +18,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - AppleTree
+  - Apple
+  - Basket
   - 
   - 
   - 
