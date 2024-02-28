@@ -10,6 +10,7 @@ TagManager:
   - _Player
   - Goal
   - Enemy
+  - Collectible
   layers:
   - Default
   - TransparentFX

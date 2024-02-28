@@ -28,6 +28,15 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+    void SetCountText()
+    {
+
+       // countText.text = " Count: " + count.ToString();
+       // if (count >= 12)
+        //{
+          //  winTextObject.SetActive(true);
+       // }
+    }
     void OnTriggerEnter(Collider other)
     {
 
@@ -43,6 +52,15 @@ public class PlayerMovement : MonoBehaviour
         {
             gameObject.SetActive(false);
             RespawnPlayer();
+        }
+
+
+        if (other.gameObject.CompareTag("Collectable"))
+        {
+            other.gameObject.SetActive(false);
+          //  count = count + 1;
+
+           // SetCountText();
         }
 
         //other.gameObject.SetActive(false);
