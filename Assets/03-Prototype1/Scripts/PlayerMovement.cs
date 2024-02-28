@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 0;
     private Rigidbody rb;
+    public Transform respawnPoint;
     private float movementX;
     private float movementY;
     void Start()
@@ -40,10 +41,18 @@ public class PlayerMovement : MonoBehaviour
         GameObject collidedWith = other.gameObject;
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
+            RespawnPlayer();
         }
 
-        other.gameObject.SetActive(false);
+        //other.gameObject.SetActive(false);
 
+    }
+    void RespawnPlayer()
+    {
+        
+        transform.position = respawnPoint.position;
+       
+        gameObject.SetActive(true);
     }
 }
